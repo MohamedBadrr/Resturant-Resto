@@ -1,0 +1,109 @@
+
+:root{
+    --mainColor-:rgb(223, 46, 2);
+    --secondColor: rgb(248, 244, 244);
+}
+.lightBoxUser{
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    inset:0;
+    z-index: 1001;
+    height: 100VH;
+    display: none;
+}
+
+.loginBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    /* display: none; */
+    
+}
+#closeLoginIcon{
+    position: absolute;
+    top: 20px !important;
+    right: 20px !important;
+    color: var(--mainColor-) !important;
+    /* z-index: 1002123; */
+}
+.login{
+    padding: 30px;
+    position: relative;
+}
+#userName{
+    border: 1px solid var(--mainColor-);
+    border-radius: 20px;
+    font-size: large;
+    font-weight: bold;
+    width: 75%;
+    margin: auto;
+    margin-bottom:10px ;
+}
+.loginTitle{
+    margin-bottom: 40px;
+}
+.checkLogin{
+    margin: auto !important;
+    margin-left: 95px !important;
+    margin-top: 15px !important;
+}
+#password{
+    border: 1px solid var(--mainColor-);
+    border-radius: 20px;
+    font-size: large;
+    font-weight: bold;
+    width: 75%;
+    margin-bottom:20px ;
+    margin-top:20px !important;
+    margin: auto;
+}
+.btn-login{
+    margin-left: 275px !important;
+    margin-bottom: 20px !important;
+    /* margin-top: 10px !important; */
+    color: white !important;
+    font-size: 20px;
+
+}
+.linksLogin a{
+text-decoration: none;
+}
+
+@media screen and (max-width :768px){
+    #userName{
+        width: 100%;
+    }
+    .loginTitle{
+        margin-bottom: 40px;
+    }
+    .checkLogin{
+        margin: auto !important;
+        margin-left: 15px !important;
+        margin-top: 15px !important;
+    }
+    #password{  
+        width: 100%;
+    }
+    .btn-login{
+        margin-left: 75px !important;
+        margin-bottom: 20px !important;
+        font-size: 16px !important;
+    }
+   
+    #closeLoginIcon{
+        position: absolute;
+        top: 10px !important;
+        right: 10px !important;
+        color: var(--mainColor-) !important;
+        font-size: 25px !important;
+    }
+    .linksLogin p{
+        font-size:13px  !important ;
+        }
+        .linksLogin a{
+            text-decoration: none;
+            }
+
+
+}

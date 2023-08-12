@@ -1,0 +1,774 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resto </title>
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/register.css">
+    </head>
+  <body>
+
+    <div class="loadingScreen">
+      <i class="fa fa-spinner fa-spin fa-5x"></i>
+    </div>
+
+    <!-- add charts -->
+    <div class="addToChart">
+    <div class="innerAddToChart">
+      <h4 class="titleChart">Your Orders <i id="closeOrdersIcon" class="fa fa-times-circle text-white "></i></h4>
+      <div class="meal mb-2">
+        <p class="text-center">No orders Yet</p>
+        </div>
+      <div class="totalCost"></div>
+    </div>
+  </div>
+
+   
+    <!-- login  & -->
+  <div class="lightBoxUser">
+
+      <!-- login -->
+      <div class="loginBox ">
+      <div class="book-form my-3 p-5 container-fluid">
+        
+        <form  action="" class="bg-white p-4 login form-login">
+          <h3 class="loginTitle">Sign in </h3> <i id="closeLoginIcon" class="fa fa-times-circle text-white fa-2x"></i>
+          <div class="form-group">
+            <!-- <label for="" class="p-1">Name</label> -->
+            <input id="userName"  class="form-control" type="text"  name="" id="name" placeholder="Email">
+          </div>
+
+          <div class="form-group">
+            <!-- <label for="" class="p-1">Day</label> -->
+            <input id="password" class="form-control" type="password" name="" id="name" placeholder="Password">
+          </div>
+          <div class="form-check checkLogin">
+            <input class="form-check-input" type="checkbox" value="" id="">
+            <label class="form-check-label" for="">
+             <span class="fw-bold"> Remember Me</span>
+            </label>
+          </div>
+        
+          <div class="form-group">
+            <button  type="submit" class=" btn bg-danger text-center btn-login">Sign in</button>
+          </div >
+          <div class="linksLogin">
+            <p class="text-center fw-bold">Forget Password ?  <span class="blueText">Click Here</span></p>
+                    <p class="text-center fw-bold">Don't have an account ?  <span class="singupLink blueText"> Sign Up Now</span ></p>
+          </div>
+          </div>
+        </form>
+        
+        </div>
+      </div>
+      </div>
+  </div>
+
+
+ <!-- register -->
+  <div class="lightBoxUserRegister">
+    <div class="registerBox ">
+    <div class="book-form my-3 p-5 container-fluid">
+      
+      <form  action="" class="bg-white p-4 register form-register">
+        <h3 class="registerTitle">Sign Up </h3> <i id="closeRegisterIcon" class="fa fa-times-circle text-white fa-2x"></i>
+        <div class="form-group">
+          <label for="" class="p-1 registerLabel">Name</label>
+          <input id="registerInput"  class="form-control" type="text"  name="" id="name" placeholder="Full Name">
+        </div>
+
+        <div class="form-group">
+          <label for="" class="p-1 registerLabel">Email Adress</label>
+          <input id="registerInput" class="form-control" type="password" name="" id="name" placeholder="Email Adress">
+        </div>
+
+        <div class="form-group">
+          <label for="" class="p-1 registerLabel">Password</label>
+          <input id="registerInput" class="form-control" type="password" name="" id="name" placeholder="Strong Password">
+        </div>
+
+        <div class="form-group">
+          <label for="" class="p-1 registerLabel">Confirm Password</label>
+          <input id="registerInput" class="form-control" type="password" name="" id="name" placeholder="Confirm Password">
+        </div>
+       
+        <div class="form-group">
+          <button  type="submit" class=" btn bg-danger text-center btn-register">Sign Up</button>
+        </div>
+        <p class="text-center fw-bold">Already have an account ?<span class="blueText signLink">Sign In</span></p>
+        </div>
+      </form>
+      
+      </div>
+    </div>
+    </div>
+</div>
+
+
+     <header id="HEADER">
+      <nav class="navbar navbar-expand-sm ">
+        <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Resto</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav m-auto mt-1 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#MENU">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#RESERVATION">Reservation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#ABOUT">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#CONTACT">Contact us</a>
+            </li>
+          </ul>
+          
+            <a href=""><i class="fa fa-home text-dark "></i></a>
+            <input id="searchBox" type="search" placeholder="Search">
+            <i id="searchIcon" class="fa fa-search "></i>
+            <i id="userIcon" class="fa-solid fa-user "></i>
+            <i id="buyIcon" class="fa-solid fa-cart-shopping "></i>
+        </div>
+      </div>
+    </nav>
+      <!-- home -->
+    <div class="home">  
+      <div class="container ">
+        <div class="row ">
+          <div class="col-md-6 row-home ">
+            <div class="caption">
+              <h1 class="mb-4">Enjoy, You Will Eat <br><span class="mainColor">The Best Food</span> At <span class="mainColor fw-bold">Resto</span>.</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam voluptatum, doloribus assumenda vel earum architecto minima voluptatem. Ea ut error excepturi id neque? Corrupti iste culpa, vel dolorem cum delectus, odit in laborum aliquid suscipit nulla at animi vitae illum.</p>
+             <a class="btn home-botton" href="#WHY">Lets Start</a>
+            </div>
+          </div>
+          <div class="col-md-6 row-home">
+            <div class="logo">
+              <img src="./images/Roasted Chicken with Vegetables.png" alt="" class="w-100" id="img-photo">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </header> 
+
+  <!-- why -->
+    <section class="why " id="WHY">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 ">
+              <div>
+                <img src="./images/good1.png" alt="" class="w-100" id="why-img">
+              </div>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-7">
+              <div>
+                <h2 class="">Why People Choose <strong class="mainColor">Resto</strong> ?</h2>
+                  <div class="answers ">
+
+                    <div class="answer">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-2 ">
+                     
+                      <i class="fa-solid fa-utensils fa-3x text-center ms-5 mt-4"></i>
+                          </div>
+                          <div class="col-md-8">
+                            <div>
+                              <h4>We have your favorite food.</h4>
+                              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est cumque illum repellat placeat laudantium fugit.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="answer">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-2 ">
+                  
+                      <i class="fa-brands fa-gratipay fa-3x text-center ms-5 mt-4"></i>
+                          </div>
+                          <div class="col-md-8">
+                            <div>
+                              <h4>Our restaurant is beautiful. </h4>
+                              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est cumque illum repellat placeat laudantium fugit.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="answer">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-2 me-1">
+                      <!-- <img src="./images/b07903d05126d18eb8b4c481cd8ec51d.jpg" alt="" class="w-100"> -->
+                      <i class="fa-solid fa-kitchen-set fa-3x text-center ms-5 mt-4"></i>
+                          </div>
+                          <div class="col-md-8">
+                            <div>
+                              <h4>We have best chefs in the town.</h4>
+                              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est cumque illum repellat placeat laudantium fugit.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            <div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <div class="line"></div>
+
+    <!-- best items -->
+      <section class="best-food my-3 mb-5">
+     
+      <div class="container">
+      <h2 class="text-center fw-bold">Our Best Food Plates</h2>
+      <p class="text-center px-5">Lorem ipsum dolor sit, amet  aommodi aut architecto reprehenderit velit modi quidem tenetur? modi quidem tenetur? <br>modi quidem tenetur?modi quidem tenetur?</p>
+        
+      <div class="row bestRow my-4 px-4">
+        
+        <div class="col-md-3 mb-3">
+          <div class="card text-center">
+            <img src="./images/diah2.jpeg" alt="" class="img-card">
+            <div class="card-body">
+              <h3 class="text-center fw-bold mainColor">Roast Chicken</h3>
+              <p class="my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit !</p>
+              <h3 class="mt-3 mainColor">250 $</h3>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-md-3 mb-3">
+          <div class="card text-center">
+            <img src="./images/beefdish.png" alt="" class="img-card">
+            <div class="card-body">
+              <h3 class="text-center fw-bold mainColor">Kofta and Rice</h3>
+              <p class="my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit !</p>
+              <h3 class="mt-3 mainColor">100 $</h3>
+            </div>
+          </div>
+
+            </div>
+
+            <div class="col-md-3 mb-3">
+              <div class="card text-center">
+                <img src="./images/dish3.jpg" alt="" class="img-card">
+                <div class="card-body">
+                  <h3 class="text-center fw-bold mainColor">Roast Beef</h3>
+                  <p class="my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit !</p>
+                  <h3 class="mt-3 mainColor">200 $</h3>
+                </div>
+              </div>
+    
+              </div>
+
+
+                <div class="col-md-3 mb-3">
+                  <div class="card text-center">
+                    <img src="./images/dish4.jpg" alt="" class="img-card">
+                    <div class="card-body">
+                      <h3 class="text-center fw-bold mainColor">Pasta Red Souce</h3>
+                      <p class="my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit !</p>
+                      <h3 class="mt-3 mainColor">150 $</h3>
+                    </div>
+                  </div>
+                 </div>
+
+                 <div class="dsn pe-5">
+                  
+                </div>
+        </div>
+       
+      </div>
+        
+      </div> 
+
+    </section>
+    <div class="lightbox-container">
+      <div class="lightbox-item">
+        <i id="prev" class="fa fa-arrow-alt-circle-left text-white fa-2x mx-3"></i>
+        <i id="next" class="fa fa-arrow-alt-circle-right text-white fa-2x mx-3"></i>
+        <i id="close" class="fa fa-times-circle text-white fa-2x"></i>
+      </div>
+    </div> 
+
+    <!-- menu -->
+     <section class="menu mb-5" id="MENU">  
+      <h2 class="menuTiltle ">Our Food Menu</h2>
+      <div class="line1"></div> <div class="line2"></div> 
+      <div class="container">
+
+
+        <div class="row">
+          <div class="col-md-3 my-3">
+            <div class="card mealCard " >
+                <img src="./images/31160834c28e6c10133936f6915b2843.jpg" class="card-img-top" alt="..." height="170px">
+                <div class="card-body">
+                  
+                  <div class="cardTitle d-flex justify-content-between "><h4 class=" mealName text-center fw-bold">Spaghetti </h4> <i class=" fa-regular fa-heart"></i></div>
+                  <p class="card-text">Some quick example text to build on the of the card's content.</p>
+                  <div class="cardPrice d-flex justify-content-between px-2">
+                    <h4 class="price">210 $</h4>
+                    <button href="#" class="btn btn-primary mealBtn">Add One</button>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+
+          <div class="col-md-3 my-3">
+            <div class="card mealCard" >
+                <img src="./images/01a8b20022d3ac8d1c0ad960e7b67466.jpg" class="card-img-top" alt="..." height="170px">
+                <div class="card-body">
+                  <div class="cardTitle d-flex justify-content-between"><h4 class=" mealName text-center fw-bold">Smash Burger </h4> <i class="fa-regular fa-heart"></i></div>
+                  <p class="card-text">Some quick example text to build on the of the card's content.</p>
+                  <div class="cardPrice d-flex justify-content-between px-2">
+                    <h4 class="price">150 $</h4>
+                    <button href="#" class="btn btn-primary mealBtn">Add One</button>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+          <div class="col-md-3 my-3">
+            <div class="card mealCard" >
+                <img src="./images/1f5a97939c80773cd2177a8d678eeee5.jpg" class="card-img-top" alt="..." height="170px">
+                <div class="card-body">
+                  <div class="cardTitle d-flex justify-content-between"><h4 class="mealName text-center fw-bold">Lazania </h4> <i class="fa-regular fa-heart"></i></div>
+                  <p class="card-text">Some quick example text to build on the of the card's content.</p>
+                  <div class="cardPrice d-flex justify-content-between px-2">
+                    <h4 class="price">190 $</h4>
+                    <button href="#" class="btn btn-primary mealBtn">Add One</button>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="col-md-3 my-3">
+            <div class="card mealCard" >
+                <img src="./images/4c34f0e70d69de7ca67c61cc6457d0b1.jpg" class="card-img-top" alt="..." height="170px">
+                <div class="card-body">
+                  <div class="cardTitle d-flex justify-content-between"><h4 class="mealName text-center fw-bold">Nudels </h4> <i class="fa-regular fa-heart"></i></div>
+                  <p class="card-text">Some quick example text to build on the of the card's content.</p>
+                  <div class="cardPrice d-flex justify-content-between px-2">
+                    <h4 class="price">90 $</h4>
+                    <button href="#" class="btn btn-primary mealBtn">Add One</button>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+          <div class="col-md-3 my-3">
+            <div class="card mealCard" >
+                <img src="./images/4d8bce02999b38314e48ea984f015fe0.jpg" class="card-img-top" alt="..." height="170px">
+                <div class="card-body">
+                  <div class="cardTitle d-flex justify-content-between"><h4 class="mealName text-center fw-bold">Pizza </h4> <i class="fa-regular fa-heart"></i></div>
+                  <p class="card-text">Some quick example text to build on the of the card's content.</p>
+                  <div class="cardPrice d-flex justify-content-between px-2">
+                    <h4 class="price">140 $</h4>
+                    <button href="#" class="btn btn-primary mealBtn">Add One</button>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+          <div class="col-md-3 my-3">
+            <div class="card mealCard" >
+                <img src="./images/7bb8e65c8f07e794beae57c1b2b1f315.jpg" class="card-img-top" alt="..." height="170px">
+                <div class="card-body">
+                  <div class="cardTitle d-flex justify-content-between"><h4 class="mealName text-center fw-bold">Pasta and Beef</h4> <i class="fa-regular fa-heart"></i></div>
+                  <p class="card-text">Some quick example text to build on the of the card's content.</p>
+                  <div class="cardPrice d-flex justify-content-between px-2">
+                    <h4 class="price">130 $</h4>
+                    <button href="#" class="btn btn-primary mealBtn">Add One</button>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+          <div class="col-md-3 my-3">
+            <div class="card mealCard" >
+                <img src="./images/7c45ccdfaf1931e1199cd8cc0321c2ff.jpg" class="card-img-top" alt="..." height="170px">
+                <div class="card-body">
+                  <div class="cardTitle d-flex justify-content-between"><h4 class="mealName text-center fw-bold">Pasta White Souce</h4> <i class="fa-regular fa-heart"></i></div>
+                  <p class="card-text">Some quick example text to build on the of the card's content.</p>
+                  <div class="cardPrice d-flex justify-content-between px-2">
+                    <h4 class="price">130 $</h4>
+                    <button href="#" class="btn btn-primary mealBtn">Add One</button>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+          <div class="col-md-3 my-3">
+            <div class="card mealCard" >
+                <img src="./images/good3.jpeg" class="card-img-top" alt="..." height="170px">
+                <div class="card-body">
+                  <div class="cardTitle d-flex justify-content-between"><h4 class="mealName text-center fw-bold">Chicken </h4> <i class="fa-regular fa-heart"></i></div>
+                  <p class="card-text">Some quick example text to build on the of the card's content.</p>
+                  <div class="cardPrice d-flex justify-content-between px-2">
+                    <h4 class="price">250 $</h4>
+                    <button href="#" class="btn btn-primary mealBtn">Add One</button>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+          <div class="col-md-3 my-3">
+            <div class="card mealCard" >
+                <img src="./images/63b71ebb-96fb-41b8-9210-518b094ce8b6.jpeg" class="card-img-top" alt="..." height="170px">
+                <div class="card-body">
+                  <div class="cardTitle d-flex justify-content-between"><h4 class="mealName text-center fw-bold">Lotas Ice Craim </h4> <i class="fa-regular fa-heart"></i></div>
+                  <p class="card-text">Some quick example text to build on the of the card's content.</p>
+                  <div class="cardPrice d-flex justify-content-between px-2">
+                    <h4 class="price">50 $</h4>
+                    <button href="#" class="btn btn-primary mealBtn">Add One</button>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+
+          <div class="col-md-3 my-3">
+            <div class="card mealCard" >
+                <img src="./images/9f2e8802-9b05-43fa-a052-dbedc8be3759.jpeg" class="card-img-top" alt="..." height="170px">
+                <div class="card-body">
+                  <div class="cardTitle d-flex justify-content-between"><h4 class="mealName text-center fw-bold">Chocolate Cup </h4> <i class="fa-regular fa-heart"></i></div>
+                  <p class="card-text">Some quick example text to build on the of the card's content.</p>
+                  <div class="cardPrice d-flex justify-content-between px-2">
+                    <h4 class="price">150 $</h4>
+                    <button href="#" class="btn btn-primary mealBtn">Add One</button>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+          <div class="col-md-3 my-3">
+            <div class="card mealCard" >
+                <img src="./images/0a55fae904e3a72a97c3e2b7071939b3.jpg" class="card-img-top" alt="..." height="170px">
+                <div class="card-body">
+                  <div class="cardTitle d-flex justify-content-between"><h4 class="mealName text-center fw-bold">Blurbary Cake </h4> <i class="fa-regular fa-heart"></i></div>
+                  <p class="card-text">Some quick example text to build on the of the card's content.</p>
+                  <div class="cardPrice d-flex justify-content-between px-2">
+                    <h4 class="price">200 $</h4>
+                    <button href="#" class="btn btn-primary mealBtn">Add One</button>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+          
+          <div class="col-md-3 my-3">
+            <div class="card mealCard" >
+                <img src="./images/307fea1119f75ef7af78473c12249f66.jpg" class="card-img-top" alt="..." height="170px">
+                <div class="card-body">
+                  <div class="cardTitle d-flex justify-content-between"><h4 class="mealName text-center fw-bold">BunCakes</h4> <i class="fa-regular fa-heart"></i></div>
+                  <p class="card-text">Some quick example text to build on the of the card's content.</p>
+                  <div class="cardPrice d-flex justify-content-between px-2">
+                    <h4 class="price">130 </h4> <span>$</span>
+                    <button href="#" class="btn btn-primary mealBtn">Add One</button>
+                  </div>
+                </div>
+              </div>
+          </div>
+          </div>
+
+
+        </div>
+      </div>
+    </section> 
+
+     <!-- RESERVATION -->
+     <section class="reservation" id="RESERVATION">
+      <h2 class="menuTiltle ">Reservation</h2>
+      <div class="line1"></div> <div class="line2"></div> 
+      
+      <div class="book-form my-3 p-5 container-fluid">
+        
+        <form  action="" class="bg-white p-4">
+          <h3>Book your Table </h3>
+          <div class="alert alert-primary text-center" id="msgRreser" role="alert">
+            <strong class="">Thanks for Booking ♥ , We are waiting you .</strong>  <i id="close" class="alert-close fa fa-times-circle text-dark fa-2x"></i>
+          </div>  
+          <div class="form-group">
+            <label for="" class="p-1">Name</label>
+            <input   class="form-control name" type="text"   placeholder="Full Name">
+          </div>
+
+          <div class="form-group">
+            <label for="" class="p-1">Day</label>
+            <input  class="form-control day"  type="date"  placeholder="Date">
+          </div>
+
+          <div class="form-group">
+            <label for="" class="p-1">Time</label>
+            <input  class="form-control time" type="time"  placeholder="Name">
+          </div>
+
+          <div class="form-group">
+            <label for="" class="p-1">Number Of Persons</label>
+            <input  class="form-control numberOfPerson " type="number"  placeholder="Enter number">
+          </div>
+
+          <div class="form-group">
+            <button  type="submit" class=" btnReservation btn form-control ">Book Now </button>
+          </div>
+          </div>
+        </form>
+        
+        </div>
+      </div>
+    </section>
+    <!-- about us -->
+    <section class="about mb-4" id="ABOUT">
+      <div class="container">
+        <h2>About Us</h2>
+        <div class="about-caption">
+              <div class="about-text">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing  elit. Illo id quis ipsa eaque quia elit. Illo id quis ipsa eaque quiaelit. Illo id quis ipsa eaque quia elit. Illo id quis ipsa eaque quia elit. Illo id quis ipsa eaque quia, suscipit consequuntur quidem debitis tempore odio libero, eligendi repellendus veniam nemo quas doloribus porro deserunt aut eveniet natus assumenda! Voluptatibus totam consequatur dicta quia facere error odit cupiditate enim saepe mollitia velit, commodi distinctio, delectus consectetur quod vero at laboriosam maxime adipisci dolorum eius corrupti quidem? Ad, sapiente quasi blanditiis consequuntur cumque quisquam praesentium odit placeat reprehenderit optio! Error ut fugit architecto dolores laboriosam fugiat tempora et consequuntur quod quasi sint aliquam praesentium perferendis autem facere molestias repellendus corporis, iste iure sequi, ipsam odit. Officia, modi.
+                </p>
+              </div>
+              <div class="about-logo">
+                <img src="./images/Premium_Vector___Cartoon_happy_chef_with_ok_sign-removebg-preview.png"   alt="">
+              </div>
+        </div>
+      </div>
+    </section> 
+     <!-- our numbers -->
+     <section class="ourNumbers my-4">
+      <h2>Our Numbers</h2>
+      <div class="container-fluid numbers">
+      <div class="row">
+        <div class="col-md-3 text-center">
+          <div class="number text-center">
+            <h3 class="text-white fw-bold text-center">3500</h3>
+            <div class="line-number"></div>
+            <h3>Customers</h3>
+          </div>
+        </div>
+
+        <div class="col-md-3 text-center">
+          <div class="number text-center">
+            <h3 class="text-white fw-bold text-center">2500</h3>
+            <div class="line-number"></div>
+            <h3>Happy Customers</h3>
+          </div>
+        </div>
+
+        <div class="col-md-3 text-center">
+          <div class="number text-center">
+            <h3 class="text-white fw-bold text-center">1000</h3>
+            <div class="line-number"></div>
+            <h3>Reservation</h3>
+          </div>
+        </div>
+
+        <div class="col-md-3 text-center">
+          <div class="number text-center">
+            <h3 class="text-white fw-bold text-center">300</h3>
+            <div class="line-number"></div>
+            <h3>Party</h3>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <!-- our golden Chefs -->
+     <section class="golden-chefs" id="GOLDEN">
+     
+      <div class="container">
+        <h2>Our Golden Chefs</h2>
+        <div class="row mb-4">
+
+          <div class="col-md-3 mb-3">
+            <div class="golden-chef card text-center chefHO"> 
+              <div class="hoverChef text-center">
+                  <h3 class="text-white fw-bold titleHover">Antonio</h4><br>
+                  <h4 class=" fw-bold mainColor" > Master Chef</p>
+                  <div class="icons">
+                        <i class="fa-brands fa-github text-dark mx-2"></i>
+                        <i class="fa-brands fa-facebook text-dark mx-2"></i>
+                        <i class="fa-brands fa-linkedin text-dark mx-2 "></i></i>
+                        <i class="fa-brands fa-twitter text-dark mx-2"></i>
+                        <i class="fa-brands fa-instagram text-dark mx-2"></i>
+                  </div>
+                  
+              </div>
+              <img src="./images/Chef PNG image with transparent background.png" alt="" class="w-100 chefImage">
+              <div class="card-body">
+                <h3 class="text-center fw-bold mainColor">Antonio</h3>
+                <p class="my-2">Lorem ipsum dolor sit amet consectetur.</p>
+                <div class="star my-2">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                </div>
+              </div>
+             </div>
+          </div>
+
+          <div class="col-md-3  mb-3">
+            <div class="golden-chef card text-center chefHO">
+              <div class="hoverChef text-center">
+                <h3 class="text-white fw-bold titleHover">Christina</h4><br>
+                <h4 class=" fw-bold mainColor" > Master Chef</p>
+                <div class="icons">
+                      <i class="fa-brands fa-github text-dark mx-2"></i>
+                      <i class="fa-brands fa-facebook text-dark mx-2"></i>
+                      <i class="fa-brands fa-linkedin text-dark mx-2 "></i></i>
+                      <i class="fa-brands fa-twitter text-dark mx-2"></i>
+                      <i class="fa-brands fa-instagram text-dark mx-2"></i>
+                </div>
+                
+            </div>
+              <img src="./images/Christina.jpeg" alt="" class="w-100 chefImage">
+              <div class="card-body">
+                <h3 class="text-center fw-bold mainColor">Christina</h3>
+                <p class="my-2">Lorem ipsum dolor sit amet consectetur.</p>
+                <div class="star my-2">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+              </div>
+             </div>
+          </div>
+
+          <div class="col-md-3  mb-3">
+            <div class="golden-chef card text-center chefHO">
+              <div class="hoverChef text-center">
+                <h3 class="text-white fw-bold titleHover">Robert</h4><br>
+                <h4 class=" fw-bold mainColor" > Master Chef</p>
+                <div class="icons">
+                      <i class="fa-brands fa-github text-dark mx-2"></i>
+                      <i class="fa-brands fa-facebook text-dark mx-2"></i>
+                      <i class="fa-brands fa-linkedin text-dark mx-2 "></i></i>
+                      <i class="fa-brands fa-twitter text-dark mx-2"></i>
+                      <i class="fa-brands fa-instagram text-dark mx-2"></i>
+                </div>
+                
+            </div>
+              <img src="./images/Free Photo _ Chef with thumb up over white background.jpeg" alt="" class="w-100 chefImage">
+              <div class="card-body">
+                <h3 class="text-center fw-bold mainColor">Robert</h3>
+                <p class="my-2">Lorem ipsum dolor sit amet consectetur.</p>
+                <div class="star my-2">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+              </div>
+             </div>
+          </div>
+
+          <div class="col-md-3  mb-3">
+            <div class="golden-chef card text-center chefHO">
+              <div class="hoverChef text-center">
+                <h3 class="text-white fw-bold titleHover">Alisia</h4><br>
+                <h4 class=" fw-bold mainColor" > Master Chef</p>
+                <div class="icons">
+                      <i class="fa-brands fa-github text-dark mx-2"></i>
+                      <i class="fa-brands fa-facebook text-dark mx-2"></i>
+                      <i class="fa-brands fa-linkedin text-dark mx-2 "></i></i>
+                      <i class="fa-brands fa-twitter text-dark mx-2"></i>
+                      <i class="fa-brands fa-instagram text-dark mx-2"></i>
+                </div>
+            </div>
+              <img src="./images/64d58a89-6196-4b20-aecf-b5cfb4430227.jpeg" alt="" class="w-100 chefImage">
+              <div class="card-body">
+                <h3 class="text-center fw-bold mainColor">Alisia</h3>
+                <p class="my-2">Lorem ipsum dolor sit amet consectetur.</p>
+                <div class="star my-2">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                </div>
+              </div>
+             </div>
+          </div>
+        </div>
+      </div>
+    </section> 
+
+
+
+    <section class="subscribe" id="CONTACT">
+      <div class="container">
+        <div class="row ">
+          <div class="col-md-4 text-center">
+            <h2 class="mainColor">Contac Us <span class="text-dark text-center">Newsletter</span></h2>
+          </div>
+          <div class="offset-2 col-md-6">
+            <div>
+              <input class="subscribeInput  " placeholder="Enter your Meassage" type="text"> <button  class="subscribeButton">Send</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
+    <!-- button up -->
+    <div class="arrow"><a href="#HEADER"><i class="fa-solid fa-chevron-up"></i></a></div>
+
+      <!-- footer -->
+    <footer class="ffooter">
+             
+      <div class="coppright text-center"> 
+          &copy; copyright <strong><span class="text-dark fw-bold">Resto</span></strong> All Rights Reseved
+       </div>
+       <div class="credite text-center">
+          Created By <Span class="me">Eng: <strong class="text-dark">Mohamed Badr</strong></Span>
+       </div>
+       <div class="icons text-center">
+          
+          <a href="https://github.com/MohamedBadrr" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=100004812045596" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.linkedin.com/in/mohamed-badr-636804219/" target="_blank"><i class="fa-brands fa-linkedin"></i></i></a>
+          <a href="https://www.facebook.com/profile.php?id=100004812045596" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://www.instagram.com/mohamed_bader_111/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+</footer>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/code.jquery.com_jquery-3.7.0.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
+
+
